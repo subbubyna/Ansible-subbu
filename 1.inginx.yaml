@@ -1,0 +1,11 @@
+- name : install and run nginx
+  host : all
+  tasks:
+   - name : install nginx pckage 
+     ansible.builtin.package:
+    name : nginx
+    state : present
+   - name : run nginx pckage 
+     ansible.bultin.service:
+    name : nginx 
+    state : started   
